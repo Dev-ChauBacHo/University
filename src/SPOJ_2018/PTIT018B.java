@@ -1,11 +1,10 @@
 package SPOJ_2018;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class PTIT018B {
-    private static Scanner reader = new Scanner(System.in);
+    private static final Scanner reader = new Scanner(System.in);
 
     public static void main(String[] args) {
         int T = reader.nextInt();
