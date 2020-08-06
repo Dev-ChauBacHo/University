@@ -33,7 +33,6 @@ public class PTIT018I {
     private static long result(int a, int b, int c, int n) {
         long lcm = lcm(a, b);
         lcm = lcm(lcm, c);
-//        System.out.println(lcm);
         int i = 1;
         while (countNumber(lcm) < n) {
             lcm /= i;
