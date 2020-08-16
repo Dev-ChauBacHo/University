@@ -1,6 +1,4 @@
 package PTIT_Practice;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
 public class P201PROH {
@@ -16,25 +14,8 @@ public class P201PROH {
     }
     private static String queue(int a, int b) {
         if (a == 1 && b > 1) return "NO";
-        if (a >= b) return "YES";
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(a);
-
-        while (!queue.isEmpty()) {
-            int u = queue.poll();
-            if (u == b) return "YES";
-            int temp;
-
-            temp = 3 * u / 2;
-            if (u % 2 == 0 && temp != a && u < b)
-                queue.add(temp);
-
-            temp = u - 1;
-            if (u > 1 && temp != a)
-                queue.add(temp);
-
-
-        }
-        return "NO";
+        if (a == 2 && b > 3) return "NO";
+        if (a == 3 && b > 3) return "NO";
+        return "YES";
     }
 }
