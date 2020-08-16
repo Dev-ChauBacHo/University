@@ -14,7 +14,6 @@ public class PTIT018C {
             long b = reader.nextLong();
             long m = reader.nextLong();
             long mod_A_for_M = largeNumber_getMod(a, m);
-            long oldMod = mod_A_for_M;
             long result = multiple(mod_A_for_M, b, m) % m;
             System.out.println(result);
         }
