@@ -2,7 +2,9 @@ package SPOJ_2018;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/*
+    https://vn.spoj.com/PTIT/problems/PTIT018C/
+ */
 public class PTIT018C {
     private static final Scanner reader = new Scanner(System.in);
 
@@ -31,6 +33,7 @@ public class PTIT018C {
         return carry;
     }
 
+
     private static long multiple(long a, long b, long mod) {
         if (b == 0) return 1 % mod;
         long temp = multiple(a, b / 2, mod);
@@ -38,6 +41,7 @@ public class PTIT018C {
         else return (temp * temp % mod) * a % mod;
     }
 
+    // This function find the result of: s mod m. With s is a large number
     private static long largeNumber_getMod(String s, long m) {
         long carry = 0;
         long divisor;
