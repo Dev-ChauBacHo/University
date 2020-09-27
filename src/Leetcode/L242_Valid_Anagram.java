@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class L242_Valid_Anagram {
-    private static Scanner reader = new Scanner(System.in);
+    private static final Scanner reader = new Scanner(System.in);
 
     public static void main(String[] args) {
         String s = reader.nextLine();
