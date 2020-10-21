@@ -15,4 +15,4 @@ Ex: (commit) 2 HashMap --> This words
 
 You can search on Google the name of the files.
 
-I don't think that no one ever visit this git anyway :(
+I don't think that no one will ever visit this git anyway. :(
