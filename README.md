@@ -6,12 +6,12 @@ If you need help with my solution, you can contact me at Telegram:
 ###    http://t.me/ChauBacHo    ####
 
 Also notice the prefix before every commit:
-[WA] - Wrong Answer
-[TLE] - Time Limit exceeded
-if not have any prefix then that code is AC - Accepted
+- [WA] - Wrong Answer
+- [TLE] - Time Limit exceeded
+- if not have any prefix then that code is AC - Accepted
 
 Ex: (commit) [TLE] - HashMap II --> This code got Timelimit exceeded
-Ex: (commit) 2 HashMap --> This words
+Ex: (commit) 2 HashMap --> This works
 
 You can search on Google the name of the files.
 
