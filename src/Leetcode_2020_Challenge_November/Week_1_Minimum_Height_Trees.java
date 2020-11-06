@@ -45,10 +45,17 @@ public class Week_1_Minimum_Height_Trees {
         int[] heightOfEachEdges = new int[n];
         int minHeight = Integer.MAX_VALUE;
         Vector<Integer> possibleEdges = new Vector<>();
+        Vector<Integer> impossibleEdges = new Vector<>();
         for (int i = 0; i < n; i++) {
             if (rootEdge.get(i).size() > 1) {
                 possibleEdges.add(i);
+            } else {
+                impossibleEdges.add(i);
             }
+        }
+
+        for (int i: possibleEdges) {
+                rootEdge.get(i).removeAll(impossibleEdges);
         }
 
         System.out.println(possibleEdges.toString());
@@ -69,48 +76,6 @@ public class Week_1_Minimum_Height_Trees {
         }
         return result;
     }
-
-//    private static void calHeight(int currentHeight, int root) {
-//        for (int i : rootEdge.get(root)) {
-//            if (rootEdge.get(i).size() > 1 && !isCheck[i]) {
-//                System.out.print(i + " ");
-//                isCheck[i] = true;
-//                calHeight(++currentHeight, i);
-//                --currentHeight;
-//                isCheck[i] = false;
-//            }
-//        }
-//        heightOfTree = Math.max(heightOfTree, currentHeight);
-//    }
-//
-//    private static void calHeightQueue(int root) {
-//        Queue<Integer> queue = new LinkedList<>();
-//        int currentHeight = 1;
-//        queue.add(root);
-//        isCheck[root] = true;
-//        int u;
-//        boolean hasPossibleEdge;
-//        while (!queue.isEmpty()) {
-//            u = queue.poll();
-//            hasPossibleEdge = false;
-//            System.out.print(u + ": ");
-//            for (int i: rootEdge.get(u)) {
-//                if (rootEdge.get(i).size() > 1 && !isCheck[i]) {
-//                    isCheck[i] = true;
-//                    queue.add(i);
-//                    hasPossibleEdge = true;
-//                    System.out.print(i + " ");
-//                }
-//            }
-//            System.out.println();
-//            if (!hasPossibleEdge) {
-//                heightOfTree = Math.max(heightOfTree, currentHeight);
-//                --currentHeight;
-//            } else {
-//                ++currentHeight;
-//            }
-//        }
-//    }
 
     private static int calHeightStack(int root, int n, Vector<Vector<Integer>> rootEdge) {
         boolean[] isCheck = new boolean[n];
